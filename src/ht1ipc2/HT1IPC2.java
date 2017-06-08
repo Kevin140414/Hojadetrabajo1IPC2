@@ -66,6 +66,11 @@ class Ventana extends JFrame implements ActionListener {
         lblDatos.setFont(new java.awt.Font("Arial", 0, 12));
         lblDatos.setBounds(20,100,400,20);
         
+        jbtInvertir = new JButton("Invertir Texto");
+        contenedor.add(jbtInvertir);
+        jbtInvertir.setBounds(170,145,120,30);
+        jbtInvertir.addActionListener(this);
+        
         jtfImput2 = new JTextField();
         contenedor.add(jtfImput2);
         jtfImput2.setBounds(20, 120, 140, 30);
@@ -113,6 +118,17 @@ class Ventana extends JFrame implements ActionListener {
                 } else {
                     lblResultado.setText("RESULTADO:  NO CUMPLE");
                 }
+            }
+        }
+        if (e.getSource() == jbtInvertir) {
+            if (jtfImput1.getText() != null) {
+                String Texto = jtfImput1.getText();
+                String TextoInvertido = "";
+
+                for (int i = Texto.length() - 1; i >= 0; i--) {
+                    TextoInvertido = TextoInvertido + Texto.charAt(i);
+                }
+                lblResultado.setText("RESULTADO:   " + TextoInvertido);
             }
         }
     }
