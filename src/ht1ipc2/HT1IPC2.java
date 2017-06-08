@@ -142,7 +142,7 @@ class Ventana extends JFrame implements ActionListener {
                 for (int i = Texto.length() - 1; i >= 0; i--) {
                     TextoInvertido = TextoInvertido + Texto.charAt(i);
                 }
-                lblResultado.setText("RESULTADO:   " + TextoInvertido);
+                lblResultado.setText("RESULTADO:   " + TextoInvertido + "_201612460");
             }
         }
         if (e.getSource() == jbtReglade3) {
