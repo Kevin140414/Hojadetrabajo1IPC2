@@ -56,6 +56,11 @@ class Ventana extends JFrame implements ActionListener {
         jbtHipotenusa.setBounds(170,95,120,30);
         jbtHipotenusa.addActionListener(this);
         
+        jbt5Vocales = new JButton("5 Vocales");
+        contenedor.add(jbt5Vocales);
+        jbt5Vocales.setBounds(300,95,120,30);
+        jbt5Vocales.addActionListener(this);
+        
         lblDatos = new JLabel("Dato 2:");
         contenedor.add(lblDatos);
         lblDatos.setFont(new java.awt.Font("Arial", 0, 12));
@@ -80,6 +85,35 @@ class Ventana extends JFrame implements ActionListener {
             float B = Float.parseFloat(jtfImput2.getText());
             float H = (float) Math.sqrt(Math.pow(A, 2) + Math.pow(B, 2));
             lblResultado.setText("RESULTADO:  " + Float.toString(H));
+        }
+        
+        if (e.getSource() == jbt5Vocales) {
+            if (jtfImput1.getText() != null) {
+                String Texto = jtfImput1.getText();
+                int contA = 0, contE = 0, contI = 0, contO = 0, contU = 0;
+                for (int i = 0; i < Texto.length(); i++) {
+                    if (String.valueOf(Texto.charAt(i)).equalsIgnoreCase("a") || String.valueOf(Texto.charAt(i)).equalsIgnoreCase("á")) {
+                        contA++;
+                    }
+                    if (String.valueOf(Texto.charAt(i)).equalsIgnoreCase("e") || String.valueOf(Texto.charAt(i)).equalsIgnoreCase("é")) {
+                        contE++;
+                    }
+                    if (String.valueOf(Texto.charAt(i)).equalsIgnoreCase("i") || String.valueOf(Texto.charAt(i)).equalsIgnoreCase("í")) {
+                        contI++;
+                    }
+                    if (String.valueOf(Texto.charAt(i)).equalsIgnoreCase("o") || String.valueOf(Texto.charAt(i)).equalsIgnoreCase("ó")) {
+                        contO++;
+                    }
+                    if (String.valueOf(Texto.charAt(i)).equalsIgnoreCase("u") || String.valueOf(Texto.charAt(i)).equalsIgnoreCase("ú")) {
+                        contU++;
+                    }
+                }
+                if (contA > 0 && contE > 0 && contI > 0 && contO > 0 && contU > 0) {
+                    lblResultado.setText("RESULTADO:  CUMPLE");
+                } else {
+                    lblResultado.setText("RESULTADO:  NO CUMPLE");
+                }
+            }
         }
     }
 }
