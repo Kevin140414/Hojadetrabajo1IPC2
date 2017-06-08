@@ -1,0 +1,20 @@
+que es un commit? es una forma de referise a los cambios
+que se registran en un repositorio.
+Estos pueden ser utilizados para trabajar en paralelo
+e implementar tambien nuevas funciones.
+Como tambien con estos se puede regresar a una version
+anterior que es una de sus funciones principales
+
+que es un merge? realizar un merge en un repositorio
+es unir varias lineas de codigo de commits de una rama
+con otra
+
+cual es la diferencia entre un "push" y un pull?
+un push manda informacion o datos mientras que un pull
+recibe datos. Esto nos resulta util cuando se trabaja 
+con otras personas.
+
+como utilizar las ramas en esta aplicacion?
+bueno una de las formas de poderla implementar en esta
+aplicacion sera la de trabajar las diferentes funciones
+en paralelo, y luego unirlas para obtener la aplicacion final.
