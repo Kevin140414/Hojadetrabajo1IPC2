@@ -71,9 +71,23 @@ class Ventana extends JFrame implements ActionListener {
         jbtInvertir.setBounds(170,145,120,30);
         jbtInvertir.addActionListener(this);
         
+        jbtReglade3 = new JButton("Regla de 3");
+        contenedor.add(jbtReglade3);
+        jbtReglade3.setBounds(300,145,120,30);
+        jbtReglade3.addActionListener(this);
+        
         jtfImput2 = new JTextField();
         contenedor.add(jtfImput2);
         jtfImput2.setBounds(20, 120, 140, 30);
+        
+        lblDatos = new JLabel("Dato 3:");
+        contenedor.add(lblDatos);
+        lblDatos.setFont(new java.awt.Font("Arial", 0, 12));
+        lblDatos.setBounds(20,150,400,20);
+        
+        jtfImput3 = new JTextField();
+        contenedor.add(jtfImput3);
+        jtfImput3.setBounds(20, 170, 140, 30);
         
         lblResultado = new JLabel("RESULTADO");
         lblResultado.setFont(new java.awt.Font("Arial Black", 0, 12));
@@ -130,6 +144,14 @@ class Ventana extends JFrame implements ActionListener {
                 }
                 lblResultado.setText("RESULTADO:   " + TextoInvertido);
             }
+        }
+        if (e.getSource() == jbtReglade3) {
+            float A = Float.parseFloat(jtfImput1.getText());
+            float X = Float.parseFloat(jtfImput2.getText());
+            float B = Float.parseFloat(jtfImput3.getText());
+            float Y = (B*X)/A;
+            
+            lblResultado.setText("RESULTADO:   " + Y);
         }
     }
 }
