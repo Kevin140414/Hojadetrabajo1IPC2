@@ -131,6 +131,7 @@ class Ventana extends JFrame implements ActionListener {
                     lblResultado.setText("RESULTADO:  CUMPLE");
                 } else {
                     lblResultado.setText("RESULTADO:  NO CUMPLE");
+                   
                 }
             }
         }
